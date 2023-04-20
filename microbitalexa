@@ -1,0 +1,13 @@
+from microbit import *
+
+def on_button_pressed_a():
+    pins.digital_write_pin(DigitalPin.P1, 1)
+    basic.pause(500)
+    pins.digital_write_pin(DigitalPin.P1, 0)
+input.on_button_pressed(Button.A, on_button_pressed_a)
+
+def on_button_pressed_b():
+    pins.digital_write_pin(DigitalPin.P2, 1)
+    basic.pause(500)
+    pins.digital_write_pin(DigitalPin.P2, 0)
+input.on_button_pressed(Button.B, on_button_pressed_b)
